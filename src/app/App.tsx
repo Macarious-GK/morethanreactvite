@@ -7,6 +7,9 @@ import {
   Microscope, Pill, Clipboard, HeartPulse, Brain, Eye
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import drCatherine from "@/assets/dr-catherine-marks.jpg";
+import GroupPhoto from "@/assets/groupphoto.jpg";
+
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -463,7 +466,7 @@ function AboutSection() {
           <FadeUp className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[#2E7FBF]/15">
               <img
-                src="https://images.unsplash.com/photo-1755189118414-14c8dacdb082?w=800&h=640&fit=crop&auto=format"
+                src={GroupPhoto}
                 alt="Santa Marya medical team"
                 className="w-full h-[520px] object-cover"
               />
@@ -499,7 +502,7 @@ function AboutSection() {
                 </span>
               </h2>
               <p className="text-[#6b8fa8] leading-relaxed mb-6" style={{ fontFamily: "Inter, sans-serif" }}>
-                Founded in 2005, Santa Marya Family Medicine Clinic has been a cornerstone of compassionate healthcare in Anaheim, CA. Led by Dr. Catherine Marks and Dr. Moussa Faltas — each with over 19 years of clinical experience — we deliver personalized care built on lasting relationships.
+                Founded in 2005, Santa Marya Family Medicine Clinic has been a cornerstone of compassionate healthcare in Anaheim, CA. Led by Dr. Catherine Marks — each with over 19 years of clinical experience — we deliver personalized care built on lasting relationships.
               </p>
               <p className="text-[#6b8fa8] leading-relaxed mb-10" style={{ fontFamily: "Inter, sans-serif" }}>
                 We believe great healthcare goes beyond treating illness — it means understanding the whole person. Our comfortable environment and customized treatment plans ensure every patient feels heard, valued, and cared for.
@@ -584,22 +587,14 @@ function ServicesSection() {
 
 function TeamSection() {
   const doctors = [
-    {
-      name: "Dr. Catherine Marks",
-      specialty: "Family Medicine Physician",
-      photo: "https://images.unsplash.com/photo-1659353888906-adb3e0041693?w=500&h=500&fit=crop&auto=format",
-      years: "19+ Years Experience",
-      bio: "Dr. Marks brings warmth and clinical excellence to every patient interaction. Board-certified in Family Medicine, she is passionate about preventive care and helping patients achieve lifelong wellness.",
-      badges: ["Board Certified", "Family Medicine", "Preventive Care"],
-    },
-    {
-      name: "Dr. Moussa Faltas",
-      specialty: "Family Medicine Physician",
-      photo: "https://images.unsplash.com/photo-1584940120505-117038d90b05?w=500&h=500&fit=crop&auto=format",
-      years: "19+ Years Experience",
-      bio: "Dr. Faltas is known for his thorough diagnostic approach and compassionate bedside manner. He specializes in chronic disease management and believes deeply in building long-term patient relationships.",
-      badges: ["Board Certified", "Chronic Disease", "Patient Advocacy"],
-    },
+  {
+    name: "Dr. Catherine Marks",
+    specialty: "Family Medicine Physician",
+    photo: drCatherine,
+    years: "19+ Years Experience",
+    bio: "Dr. Marks brings warmth and clinical excellence to every patient interaction...",
+    badges: ["Board Certified", "Family Medicine", "Preventive Care"],
+  },
   ];
 
   return (
